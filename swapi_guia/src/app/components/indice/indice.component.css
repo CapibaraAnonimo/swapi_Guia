@@ -1,0 +1,11 @@
+.contenido {
+    background-color: black;
+    display: inline-block;
+    margin: 100px;
+    padding-left: 20px;
+  } 
+  .example-card {
+    max-width: 300px;
+    color: yellow;
+    background-color: black;
+  }
