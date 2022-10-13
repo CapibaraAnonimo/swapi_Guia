@@ -11,7 +11,7 @@ export class PlanetsService {
 
   constructor(private http: HttpClient) { }
   
-  getPlanets(): Observable<PlanetsResponse> {
-    return this.http.get<PlanetsResponse>(`${environment.apiBaseUrl}/planets/`);
+  getPlanets(page: number): Observable<PlanetsResponse> {
+    return this.http.get<PlanetsResponse>(`${environment.apiBaseUrl}/planets?page=${page}`);
   }
 }
