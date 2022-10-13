@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Film } from 'src/app/interfaces/films.interface';
-import { FilmsService } from 'src/app/services/films.service';
+import {Component, OnInit} from '@angular/core';
+import {Film} from 'src/app/interfaces/films.interface';
+import {FilmsService} from 'src/app/services/films.service';
 
 @Component({
   selector: 'app-films',
@@ -10,7 +10,8 @@ import { FilmsService } from 'src/app/services/films.service';
 export class FilmsComponent implements OnInit {
   filmList: Film[] = [];
 
-  constructor(private filmService: FilmsService) {}
+  constructor(private filmService: FilmsService) {
+  }
 
   ngOnInit(): void {
     this.filmService.getFilms().subscribe((resp) => {
@@ -18,7 +19,7 @@ export class FilmsComponent implements OnInit {
     });
   }
 
-  saveImg(film: Film){
+  saveImg(film: Film) {
     let nameFilm = film.url.split("/")[5]
     return `https://starwars-visualguide.com/assets/img/films/${nameFilm}.jpg`
   }
