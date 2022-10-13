@@ -3,5 +3,13 @@
     <div mat-card-avatar class="example-header-image"></div>
     <mat-card-title>{{ film.title }}</mat-card-title>
   </mat-card-header>
-  <img mat-card-image [src]="saveImg(film)" alt="imagen" class="img"/>
+  <div class="contenedorGeneral">
+    <img mat-card-image [src]="saveImg(film)" alt="imagen" class="img"/>
+    <div class="info">
+      <div>Estreno: {{film.release_date}}</div>
+      <div>Director: {{film.director}}</div>
+      <div>Productor: {{film.producer}}</div>
+      <div>Texto Inicial: {{film.opening_crawl}}</div>
+    </div>
+  </div>
 </mat-card>
