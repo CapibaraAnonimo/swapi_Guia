@@ -8,16 +8,20 @@ import { PlanetsComponent } from './components/planets/planets.component';
 import { SpeciesComponent } from './components/species/species.component';
 import { StarshipsComponent } from './components/starships/starships.component';
 import { VehiclesComponent } from './components/vehicles/vehicles.component';
+import {FilmsDetailsComponent} from "./components/films-details/films-details.component";
 
 const routes: Routes = [
-  {path: 'films', component: FilmsComponent},
+  {path: '', redirectTo: '/indice', pathMatch: 'full'},
+  {path: 'films', children: [
+      {path: '', component: FilmsComponent},
+      {path: ':id', component: FilmsDetailsComponent}
+    ]},
   {path: 'people', component: PeopleComponent},
   {path: 'species', component: SpeciesComponent},
   {path: 'vehicles', component: VehiclesComponent},
   {path: 'starships', component: StarshipsComponent},
   {path: 'planets', component: PlanetsComponent},
   {path: 'indice', component: IndiceComponent},
-  {path: '', redirectTo: '/indice', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent }
 ];
 
