@@ -1,0 +1,24 @@
+<!-- <ul *ngFor="let item of starshipList">
+  <li>{{ item.name }}</li>
+  <img
+    mat-card-image
+    [src]="saveImg(item)"
+  />
+</ul>
+<div>
+  <span *ngFor="let in of counter(); let i = index"
+    ><button (click)="getStarshipPage(i + 1)">{{ i + 1 }}</button>&nbsp;</span
+  >
+</div> -->
+<div class="contenido">
+  <mat-card class="example-card" *ngFor="let item of starshipList">
+    <mat-card-header class="cont">
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ item.name }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="saveImg(item)" alt="imagen" class="img" />
+  </mat-card>
+  <span *ngFor="let in of counter(); let i = index"
+    ><button (click)="getStarshipPage(i + 1)">{{ i + 1 }}</button>&nbsp;</span
+  >
+</div>

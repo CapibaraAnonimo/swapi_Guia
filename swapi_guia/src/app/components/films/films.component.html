@@ -1,0 +1,16 @@
+<!-- <ul *ngFor="let item of filmList">
+    <li>{{item.title}}</li>
+    <img
+    mat-card-image
+    [src]="saveImg(item)"
+  />
+</ul> -->
+<div class="contenido">
+  <mat-card class="example-card" *ngFor="let item of filmList">
+    <mat-card-header class="cont">
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ item.title }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="saveImg(item)" alt="imagen" class="img" />
+  </mat-card>
+</div>
