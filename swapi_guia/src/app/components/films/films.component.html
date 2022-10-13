@@ -1,10 +1,10 @@
-<!-- <ul *ngFor="let item of filmList">
-    <li>{{item.title}}</li>
-    <img
-    mat-card-image
-    [src]="saveImg(item)"
-  />
-</ul> -->
+<a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">
+  <mat-icon aria-hidden="false" aria-label="Example thumbs up SVG icon">arrow_back</mat-icon>
+</a>
+<a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">
+  <mat-icon aria-hidden="false" aria-label="Example thumbs up SVG icon">home</mat-icon>
+</a>
+
 <div class="contenido">
   <a routerLink="{{i+1}}" routerLinkActive="active" ariaCurrentWhenActive="page"  *ngFor="let item of filmList; let i = index">
     <mat-card class="example-card">
