@@ -17,6 +17,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { IndiceComponent } from './components/indice/indice.component';
 import { FilmsDetailsComponent } from './components/films-details/films-details.component';
 import { SpeciesDetailsComponent } from './components/species-details/species-details.component';
+import { PeopleDetailsComponent } from './components/people-details/people-details.component';
 
 
 @NgModule({
@@ -31,7 +32,9 @@ import { SpeciesDetailsComponent } from './components/species-details/species-de
     PageNotFoundComponent,
     IndiceComponent,
     FilmsDetailsComponent,
-    SpeciesDetailsComponent
+    SpeciesDetailsComponent,
+    FilmsDetailsComponent,
+    PeopleDetailsComponent
   ],
   imports: [
     BrowserModule,
