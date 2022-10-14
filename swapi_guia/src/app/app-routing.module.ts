@@ -9,6 +9,7 @@ import { SpeciesComponent } from './components/species/species.component';
 import { StarshipsComponent } from './components/starships/starships.component';
 import { VehiclesComponent } from './components/vehicles/vehicles.component';
 import {FilmsDetailsComponent} from "./components/films-details/films-details.component";
+import { SpeciesDetailsComponent } from './components/species-details/species-details.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/indice', pathMatch: 'full'},
@@ -17,7 +18,11 @@ const routes: Routes = [
       {path: ':id', component: FilmsDetailsComponent}
     ]},
   {path: 'people', component: PeopleComponent},
-  {path: 'species', component: SpeciesComponent},
+  {path: 'species', children:[
+    {path: '', component: SpeciesComponent},
+    {path: ':id', component: SpeciesDetailsComponent}
+
+  ]},
   {path: 'vehicles', component: VehiclesComponent},
   {path: 'starships', component: StarshipsComponent},
   {path: 'planets', component: PlanetsComponent},
