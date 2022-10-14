@@ -16,6 +16,7 @@ import { StarshipsComponent } from './components/starships/starships.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { IndiceComponent } from './components/indice/indice.component';
 import { FilmsDetailsComponent } from './components/films-details/films-details.component';
+import { PeopleDetailsComponent } from './components/people-details/people-details.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { FilmsDetailsComponent } from './components/films-details/films-details.
     StarshipsComponent,
     PageNotFoundComponent,
     IndiceComponent,
-    FilmsDetailsComponent
+    FilmsDetailsComponent,
+    PeopleDetailsComponent
   ],
   imports: [
     BrowserModule,
