@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { PlanetsResponse } from '../interfaces/planets.interface';
+import { Planet, PlanetsResponse } from '../interfaces/planets.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -13,5 +13,9 @@ export class PlanetsService {
   
   getPlanets(page: number): Observable<PlanetsResponse> {
     return this.http.get<PlanetsResponse>(`${environment.apiBaseUrl}/planets?page=${page}`);
+  }
+
+  getPlanetById(id: number): Observable<Planet> {
+    return this.http.get<Planet>(`${environment.apiBaseUrl}/planets/${id}`);
   }
 }

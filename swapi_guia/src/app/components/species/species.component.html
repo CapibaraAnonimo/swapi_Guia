@@ -29,7 +29,7 @@
   >
 </div> -->
 <div class="contenido">
-  <a routerLink="{{i+1}}" routerLinkActive="active" ariaCurrentWhenActive="page"  *ngFor="let item of speciesList; let i = index">
+  <a routerLink="{{getIdSpecie(item)}}" routerLinkActive="active" ariaCurrentWhenActive="page"  *ngFor="let item of speciesList; let i = index">
     <mat-card class="example-card">
       <mat-card-header class="cont">
         <div mat-card-avatar class="example-header-image"></div>
@@ -39,4 +39,8 @@
     </mat-card>
   </a>
 </div>
+<span *ngFor="let in of counter(); let i = index"
+    ><button (click)="getSpeciesPage(i + 1)">{{ i + 1 }}</button>&nbsp;</span
+  >
+
 

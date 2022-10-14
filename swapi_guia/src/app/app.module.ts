@@ -17,8 +17,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { IndiceComponent } from './components/indice/indice.component';
 import { FilmsDetailsComponent } from './components/films-details/films-details.component';
 import { SpeciesDetailsComponent } from './components/species-details/species-details.component';
+import { PlanetsDetailsComponent } from './components/planets-details/planets-details.component';
 import { PeopleDetailsComponent } from './components/people-details/people-details.component';
-
 
 @NgModule({
   declarations: [
@@ -33,6 +33,7 @@ import { PeopleDetailsComponent } from './components/people-details/people-detai
     IndiceComponent,
     FilmsDetailsComponent,
     SpeciesDetailsComponent,
+    PlanetsDetailsComponent
     FilmsDetailsComponent,
     PeopleDetailsComponent
   ],

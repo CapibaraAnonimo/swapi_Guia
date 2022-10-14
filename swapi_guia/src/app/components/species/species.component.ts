@@ -30,9 +30,13 @@ export class SpeciesComponent implements OnInit {
   }
 
   saveImg(specie: Specie){
-    let nameSpecie = specie.url.split("/")[5]
+    let nameSpecie = this.getIdSpecie(specie)
     return `https://starwars-visualguide.com/assets/img/species/${nameSpecie}.jpg`
   }
+
+  getIdSpecie(specie: Specie){
+    return specie.url.split("/")[5]
+    }
 
   // 
 }
