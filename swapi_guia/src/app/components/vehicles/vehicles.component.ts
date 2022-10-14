@@ -11,6 +11,7 @@ export class VehiclesComponent implements OnInit {
 
   vehicleList: Vehicle[] = [];
   numPages = 0;
+  currentPage = 0;
 
   constructor(private vehicleService: VehiclesService) { }
 
@@ -22,6 +23,7 @@ export class VehiclesComponent implements OnInit {
     this.vehicleService.getVehicles(page).subscribe(resp =>  {
       this.vehicleList = resp.results;
       this.numPages = Math.ceil(resp.count / 10);
+      this.currentPage = 1;
     });
   }
 
@@ -29,10 +31,13 @@ export class VehiclesComponent implements OnInit {
     return new Array(this.numPages);
   }
 
-  saveImg(vehicle: Vehicle){
-    let nameVehicle = vehicle.url.split("/")[5]
+  saveImg(vehicle: Vehicle) {
+    let nameVehicle = this.getIdVehicle(vehicle);
     return `https://starwars-visualguide.com/assets/img/vehicles/${nameVehicle}.jpg`
   }
 
+  getIdVehicle(vehicle: Vehicle){
+    return vehicle.url.split("/")[5];
+  }
 
 }
