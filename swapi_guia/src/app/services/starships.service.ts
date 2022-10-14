@@ -10,8 +10,12 @@ import { StarshipsResponse } from '../interfaces/starships.inteface';
 export class StarshipsService {
 
   constructor(private http: HttpClient) { }
-  
+
   getStarships(page: number): Observable<StarshipsResponse> {
     return this.http.get<StarshipsResponse>(`${environment.apiBaseUrl}/starships?page=${page}`);
+  }
+
+  getStarshipById(id: number): Observable<StarshipsResponse> {
+    return this.http.get<StarshipsResponse>(`${environment.apiBaseUrl}/starships/${id}`);
   }
 }
