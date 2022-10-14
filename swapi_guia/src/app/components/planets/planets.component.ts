@@ -10,17 +10,23 @@ import { PlanetsService } from 'src/app/services/planets.service';
 export class PlanetsComponent implements OnInit {
   planetList: Planet[] = [];
   numPages = 0;
+  currentPage = 0;
 
   constructor(private planetService: PlanetsService) {}
 
   ngOnInit(): void {
-    this.getPlanetPage(1);
+    this.planetService.getPlanets(1).subscribe((resp) => {
+      this.planetList = resp.results;
+      this.numPages = Math.ceil(resp.count / 10);
+      this.currentPage = 1;
+    });
   }
 
-  getPlanetPage(page: number) {
+  getPage(page: number) {
     this.planetService.getPlanets(page).subscribe((resp) => {
       this.planetList = resp.results;
       this.numPages = Math.ceil(resp.count / 10);
+      this.currentPage = page;
     });
   }
 

@@ -42,7 +42,7 @@ export class PeopleComponent implements OnInit {
     return `https://starwars-visualguide.com/assets/img/characters/${namePers}.jpg`
   }
 
-  getIdPerson(person: People){
+  getIdPerson(person: People) {
     return person.url.split("/")[5]
   }
 
