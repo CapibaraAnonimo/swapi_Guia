@@ -33,7 +33,7 @@ import { PeopleDetailsComponent } from './components/people-details/people-detai
     IndiceComponent,
     FilmsDetailsComponent,
     SpeciesDetailsComponent,
-    PlanetsDetailsComponent
+    PlanetsDetailsComponent,
     FilmsDetailsComponent,
     PeopleDetailsComponent
   ],
