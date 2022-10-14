@@ -16,12 +16,9 @@
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>{{ item.name }}</mat-card-title>
     </mat-card-header>
-    <img mat-card-image [src]="saveImg(item)" alt="imagen" class="img" />
+    <img mat-card-image [src]="saveImg(item)" onerror="this.src='https://starwars-visualguide.com/assets/img/placeholder.jpg'" alt="imagen" class="img" />
   </mat-card>
   <span *ngFor="let in of counter(); let i = index"
-  ><button (click)="getSpeciesPage(i + 1)">{{ i + 1 }}</button>&nbsp;</span
->
+    ><button (click)="getSpeciesPage(i + 1)">{{ i + 1 }}</button>&nbsp;</span
+  >
 </div>
-
-
-
