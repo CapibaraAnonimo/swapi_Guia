@@ -10,29 +10,48 @@ import { StarshipsComponent } from './components/starships/starships.component';
 import { VehiclesComponent } from './components/vehicles/vehicles.component';
 import { FilmsDetailsComponent } from './components/films-details/films-details.component';
 import { SpeciesDetailsComponent } from './components/species-details/species-details.component';
-import {PeopleDetailsComponent} from "./components/people-details/people-details.component";
+import { PeopleDetailsComponent } from './components/people-details/people-details.component';
 import { PlanetsDetailsComponent } from './components/planets-details/planets-details.component';
-import {StarshipsDetailsComponent} from "./components/starships-details/starships-details.component";
+import { StarshipsDetailsComponent } from './components/starships-details/starships-details.component';
+import { VehiclesDetailsComponent } from './components/vehicles-details/vehicles-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/indice', pathMatch: 'full' },
-  {path: 'films', children: [
-      {path: '', component: FilmsComponent},
-      {path: ':id', component: FilmsDetailsComponent}
-    ]},
-  {path: 'people', children: [
-      {path: '', component: PeopleComponent},
-      {path: ':id', component: PeopleDetailsComponent}
-    ]},
-  {path: 'species', children:[
-    {path: '', component: SpeciesComponent},
-    {path: ':id', component: SpeciesDetailsComponent}
-  ]},
-  { path: 'vehicles', component: VehiclesComponent },
-  { path: 'starships', children: [
-      {path: '', component: StarshipsComponent},
-      {path: ':id', component: StarshipsDetailsComponent}
-    ]},
+  {
+    path: 'films',
+    children: [
+      { path: '', component: FilmsComponent },
+      { path: ':id', component: FilmsDetailsComponent },
+    ],
+  },
+  {
+    path: 'people',
+    children: [
+      { path: '', component: PeopleComponent },
+      { path: ':id', component: PeopleDetailsComponent },
+    ],
+  },
+  {
+    path: 'species',
+    children: [
+      { path: '', component: SpeciesComponent },
+      { path: ':id', component: SpeciesDetailsComponent },
+    ],
+  },
+  {
+    path: 'vehicles',
+    children: [
+      { path: '', component: VehiclesComponent },
+      { path: ':id', component: VehiclesDetailsComponent },
+    ],
+  },
+  {
+    path: 'starships',
+    children: [
+      { path: '', component: StarshipsComponent },
+      { path: ':id', component: StarshipsDetailsComponent },
+    ],
+  },
   {
     path: 'planets',
     children: [
