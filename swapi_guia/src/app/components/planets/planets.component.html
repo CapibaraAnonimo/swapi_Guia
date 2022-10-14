@@ -30,7 +30,7 @@
 
 <div class="contenido">
   <a
-    routerLink="{{ i + 1 }}"
+    routerLink="{{ getIdPlanet(item) }}"
     routerLinkActive="active"
     ariaCurrentWhenActive="page"
     *ngFor="let item of planetList; let i = index"
@@ -50,3 +50,6 @@
     </mat-card>
   </a>
 </div>
+<span *ngFor="let in of counter(); let i = index"
+    ><button (click)="getPlanetPage(i + 1)">{{ i + 1 }}</button>&nbsp;</span
+  >
