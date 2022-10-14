@@ -14,5 +14,9 @@ export class PeopleService {
   getPeople(page: number): Observable<PeopleResponse> {
     return this.http.get<PeopleResponse>(`${environment.apiBaseUrl}/people?page=${page}`);
   }
+
+  getPersonById(id: number): Observable<PeopleResponse> {
+    return this.http.get<PeopleResponse>(`${environment.apiBaseUrl}/people/${id}`);
+  }
 }
 
